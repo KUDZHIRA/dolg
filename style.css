@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/*
+.wrapper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(64, 224,208, 0.3);
+}
+*/
+.header{
+    height: 50px;
+    position: fixed;
+    background-color: teal;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+
+.header:hover{
+    opacity: 1;
+}
+
+.nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_item{
+    color: white;
+    text-decoration: none;
+}
+
+.section{
+    height: 100vh;
+}
+
+.main{
+    background-image: url(img/noviy-god.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.about_avatar {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.avatar:hover{
+    transform: rotate(45deg);
+}
+
+.about_img {
+    height: 100%;
+}
+
+.about_title{
+    color: blanchedalmond;
+    animation: title-run 2s infinite alternate;
+}
+
+.about_info {
+    background-color:teal;
+    opacity: 90%;
+    color: white;
+    width: 49%;
+    border: 5px solid teal;
+    border-radius: 10px;
+    padding: 20px;
+}
+@keyframes title-run {
+    0%{
+        transform: translateX();
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+@keyframes example {
+    0%   {
+        background-color: red;
+        transform: translateX();
+    }
+    25%  {background-color: yellow;
+        transform: translateX(12px);
+    }
+    50%  {background-color: blue;
+        transform: translateX(24px);
+    }
+    100% {background-color: green;
+        transform: translateX(36px);
+    }
+  }
+
+.button{
+    z-index: 10;
+    position: relative;
+    background-color:whitesmoke;
+    padding: 15px;
+    color:teal;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-right: 420px;               
+    animation: example 4s infinite alternate;
+}
+
+.button:hover{
+    box-shadow: 0 0 10px 5px #9e1e1e;
+    transition: all 1s ease 0s;
+}
+
+.compliment{
+    background-image: url(img/Noviy-God-2048x1152.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.compliment_content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.compliment_img-wrap{
+    height: 40%;
+    position: relative;
+}
+
+.compliment_img{
+    height: 100%;
+}
+
+
+
+.compliment_img-talk{
+    position: absolute;
+    top: 50%;
+    left: -15%;
+}
+
+.msg{
+    background-image: url(img/noviy-god100.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.msg_title{
+    margin-bottom: 65px;
+}
+
+.form-msg{
+    width: 600px;
+    background-image: url(img/noviy-god.jpg);
+    background-position: right top;
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 65px;
+    padding: 40px 40px 65px;
+    position: relative;
+}
+
+.form-msg_content{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-msg_row{
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.form-msg_title-input{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-msg_input,
+.form-msg_message {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+
+.form-msg_message{
+    height: 200px;
+}
+
+.form-msg_button-wrap{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-msg_submit{
+    background: darkred;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-msg_img-wrap{
+    height: 200px;
+    position: absolute;
+    top: -157px;
+    right: 0;
+}
+
+.form-msg_img{
+    height: 100%;
+}
+
+.poem {
+    width: 100%;
+    background-image: url(img/oAsQ6ui5VSo.jpg);
+    background-size: cover;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .poem__title {
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .poem__list {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .poem__item {
+    width: 300px;
+    min-height: 580px;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: 5px;
+    margin-right: 30px;
+    border: 2px solid transparent;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .poem__item:last-child {
+    margin-right: 0;
+  }
+  
+  .poem__item:hover {
+    border-color: green;
+    transform: scale(1.2);
+  }
+  .poem__img-wrap {
+    width: 100%;
+    height: 300px;
+  }
+  .poem__img {
+    height: 100%;
+  }
